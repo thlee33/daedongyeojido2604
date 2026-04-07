@@ -32,12 +32,12 @@ const mapRight = new maplibregl.Map({
         sources: {
             'vworld-satellite': {
                 type: 'raster',
-                tiles: [`http://xdworld.vworld.kr:8080/2d/Satellite/service/{z}/{x}/{y}.jpeg`],
+                tiles: [window.location.origin + '/v-sat/{z}/{x}/{y}.jpeg'],
                 tileSize: 256
             },
             'vworld-hybrid': {
                 type: 'raster',
-                tiles: [`http://xdworld.vworld.kr:8080/2d/Hybrid/service/{z}/{x}/{y}.png`],
+                tiles: [window.location.origin + '/v-hybrid/{z}/{x}/{y}.png'],
                 tileSize: 256
             }
         },
@@ -169,7 +169,7 @@ function updateBasemap(type) {
         if (!mapRight.getSource('vworld-base')) {
             mapRight.addSource('vworld-base', {
                 type: 'raster',
-                tiles: [`http://xdworld.vworld.kr:8080/2d/Base/service/{z}/{x}/{y}.png`],
+                tiles: [window.location.origin + '/v-base/{z}/{x}/{y}.png'],
                 tileSize: 256
             });
             mapRight.addLayer({ id: 'vworld-base', type: 'raster', source: 'vworld-base' }, 'vworld-satellite');

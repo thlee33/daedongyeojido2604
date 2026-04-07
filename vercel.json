@@ -2,16 +2,20 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/proxy-ngii",
-      "destination": "https://map.ngii.go.kr/spcemapserver/korea_old_map/wms"
+      "source": "/v-sat/(.*)",
+      "destination": "https://xdworld.vworld.kr/2d/Satellite/service/$1"
+    },
+    {
+      "source": "/v-base/(.*)",
+      "destination": "https://xdworld.vworld.kr/2d/Base/service/$1"
+    },
+    {
+      "source": "/v-hybrid/(.*)",
+      "destination": "https://xdworld.vworld.kr/2d/Hybrid/service/$1"
     },
     {
       "source": "/proxy-ngii/(.*)",
       "destination": "https://map.ngii.go.kr/spcemapserver/korea_old_map/wms/$1"
-    },
-    {
-      "source": "/proxy-forest",
-      "destination": "https://map.forest.go.kr"
     },
     {
       "source": "/proxy-forest/(.*)",
