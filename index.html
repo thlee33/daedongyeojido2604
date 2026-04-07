@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대동여지도 디지털 트윈 웹 뷰어</title>
+    <link href="https://unpkg.com/maplibre-gl@4.1.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+    <div id="app">
+        <!-- 메인 맵 컨테이너 -->
+        <div id="map-container">
+            <div id="map-left" class="map-half"></div>
+            <div id="map-right" class="map-half"></div>
+            <div id="map-divider"></div>
+        </div>
+
+        <!-- 사이드바 (Glassmorphism) -->
+        <aside id="sidebar" class="sidebar collapsed">
+            <div class="sidebar-handle" id="sidebar-toggle">
+                <span class="handle-icon">☰</span>
+            </div>
+            
+            <div class="sidebar-content">
+                <!-- 레이어 제어 섹션 -->
+                <section class="control-section">
+                    <h3 class="section-title">대동여지도 레이어</h3>
+                    <div id="layer-controls" class="control-list">
+                        <!-- 레이어 제어 항목이 메인JS에서 동적으로 추가됨 -->
+                    </div>
+                </section>
+
+
+                <div class="sidebar-footer">
+                    <button id="btn-info" class="btn-footer">출처 및 안내</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 전체화면 토글 버튼 -->
+        <button id="btn-fullscreen" class="btn-fullscreen">전체 화면으로 보기</button>
+
+        <!-- 배경 지도 토글 및 오버레이 (우측 전용) -->
+        <div class="basemap-toggle-container">
+            <div class="basemap-toggle">
+                <button id="btn-base-satellite" class="active">Satellite</button>
+                <button id="btn-base-general">General</button>
+            </div>
+            <div class="basemap-overlay-toggle">
+                <input type="checkbox" id="chk-forest-bd">
+                <label for="chk-forest-bd">🌲 백두대간 보호지역도</label>
+            </div>
+        </div>
+
+        <!-- 모달 (출처 및 알림) -->
+        <div id="modal-info" class="modal hidden">
+            <div class="modal-content glass">
+                <span class="modal-close">&times;</span>
+                <h2>📚 데이터 출처 및 안내사항</h2>
+                <div class="modal-body">
+                    <h3>데이터 출처</h3>
+                    <ul>
+                        <li>대동여지도 벡터 DB: <a href="https://www.hisgeo.info/wiki/%EC%A1%B0%EC%84%A0_%EB%8C%80%EB%8F%99%EC%97%AC%EC%A7%80%EB%8F%84_DB" target="_blank">조선 대동여지도 DB 프로젝트</a></li>
+                        <li>대동여지도 WMS 배경지도: <a href="https://map.ngii.go.kr/" target="_blank">국토지리정보원 역사지도</a></li>
+                    </ul>
+                    <h3>일러두기</h3>
+                    <p>본 지도의 공간 데이터 원본은 스캐닝된 그래픽 좌표계에 가까워 국토정보플랫폼 WMS에 개략적인 러버쉬팅 방식으로 맞춘 상태입니다. 따라서 지리적 정확성을 보증할 수 없습니다.</p>
+                    <p>대동여지도의 도로는 지형의 실제 형태가 아닌, 수계 등과 혼동되지 않도록 주요 거점을 직선 위주로 이은 일종의 '스키매틱 맵'에 가깝습니다. 산출된 최단 경로 및 소요 시간(4km/h 기준)은 참고용으로만 활용해 주십시오.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+</html>

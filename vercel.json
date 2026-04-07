@@ -1,0 +1,21 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/proxy-ngii",
+      "destination": "https://map.ngii.go.kr/spcemapserver/korea_old_map/wms"
+    },
+    {
+      "source": "/proxy-ngii/(.*)",
+      "destination": "https://map.ngii.go.kr/spcemapserver/korea_old_map/wms/$1"
+    },
+    {
+      "source": "/proxy-forest",
+      "destination": "https://map.forest.go.kr"
+    },
+    {
+      "source": "/proxy-forest/(.*)",
+      "destination": "https://map.forest.go.kr/$1"
+    }
+  ]
+}
