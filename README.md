@@ -34,11 +34,11 @@ web_viewer/
 ## 예시 화면
 ![그림 1](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG)  
 
-![그림 2](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG)  
+![그림 2](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C2.PNG)  
 
-![그림 3](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG)  
+![그림 3](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C3.PNG)  
 
-![그림 4](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG)  
+![그림 4](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C4.PNG)  
 
-![그림 5](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.PNG)  
+![그림 5](https://github.com/thlee33/daedongyeojido2604/blob/main/image/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C5.PNG)  
 
