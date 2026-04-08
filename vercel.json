@@ -14,8 +14,8 @@
       "destination": "https://xdworld.vworld.kr/2d/Hybrid/service/$1"
     },
     {
-      "source": "/proxy-ngii/(.*)",
-      "destination": "https://map.ngii.go.kr/spcemapserver/korea_old_map/wms/$1"
+      "source": "/proxy/ngii",
+      "destination": "https://map.ngii.go.kr/spcemapserver/korea_old_map/wms"
     },
     {
       "source": "/proxy-forest/(.*)",
