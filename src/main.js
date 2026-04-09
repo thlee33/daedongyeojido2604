@@ -70,10 +70,11 @@ mapRight.on('move', () => syncMaps(mapRight, mapLeft));
 // 3. 레이어 설정 및 UI 바인딩
 mapLeft.on('load', async () => {
     // 국토정보원 WMS 레이어 추가 (배경) - 프록시 우회 적용
+    // 국토정보원 WMS는 EPSG:3857 미지원 → EPSG:4326으로 요청해야 함
     const wmsProxyUrl = window.location.origin + '/proxy-ngii';
     mapLeft.addSource('ddy-wms', {
         type: 'raster',
-        tiles: [`${wmsProxyUrl}?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=korea_old_map:korea_oldmap_addAlphaChannel&STYLES=&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256&EXCEPTIONS=application/vnd.ogc.se_inimage`],
+        tiles: [`${wmsProxyUrl}?SERVICE=WMS&VERSION=1.1.0&REQUEST=GetMap&LAYERS=korea_old_map:korea_oldmap_addAlphaChannel&STYLES=&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&BBOX={bbox-epsg-4326}&WIDTH=256&HEIGHT=256`],
         tileSize: 256
     });
     mapLeft.addLayer({ id: 'ddy-wms', type: 'raster', source: 'ddy-wms' });
