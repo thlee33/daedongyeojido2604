@@ -74,7 +74,7 @@ mapLeft.on('load', async () => {
     const wmsProxyUrl = window.location.origin + '/proxy/ngii';
     mapLeft.addSource('ddy-wms', {
         type: 'raster',
-        tiles: [`${wmsProxyUrl}?SERVICE=WMS&VERSION=1.1.0&REQUEST=GetMap&LAYERS=korea_old_map:korea_oldmap_addAlphaChannel&STYLES=&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:4326&BBOX={bbox-epsg-4326}&WIDTH=256&HEIGHT=256`],
+        tiles: [`${wmsProxyUrl}?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=korea_old_map:korea_oldmap_addAlphaChannel&STYLES=&FORMAT=image/png&TRANSPARENT=TRUE&SRS=EPSG:3857&BBOX={bbox-epsg-3857}&WIDTH=256&HEIGHT=256`],
         tileSize: 256
     });
     mapLeft.addLayer({ id: 'ddy-wms', type: 'raster', source: 'ddy-wms' });
